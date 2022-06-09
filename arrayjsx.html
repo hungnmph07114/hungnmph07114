@@ -13,16 +13,16 @@
 <body>
 <div id="root"></div>
 <script type="text/babel">
-    const postItem = React.createElement('ul',null, React.createElement('li',null,'học react'),
-                                                    React.createElement('li',null,'Học cơ bản đến nâng cao')
-    )
+  //app js
+  function App() {
+      return(
+          <div id="wrapper">
+
+          </div>
+      )
+  }
     const container = document.getElementById('root')
-   // react @ 17
-   // const root = document.getElementById('root')
-   //  ReactDOM.render(postItem,root)
-    // react @ 18
-    const root = ReactDOM.createRoot(container)
-    root.render(postItem)
+    ReactDOM.render(<App>,container)
 </script>
 </body>
 </html>
