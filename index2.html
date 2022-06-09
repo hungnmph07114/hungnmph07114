@@ -8,17 +8,13 @@
     <title>Document</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
 <div id="root"></div>
-<script>
-    const postItem = React.createElement('div',{
-        className:'post-item'
-
-    }, React.createElement('h2',{
-        title: 'Học react tại f8'
-        },'học react'),
-        React.createElement('p',{},'Học cơ bản đến nâng cao')
+<script type="text/babel">
+    const postItem = React.createElement('ul',null, React.createElement('li',null,'học react'),
+                                                    React.createElement('li',null,'Học cơ bản đến nâng cao')
     )
     const container = document.getElementById('root')
    // react @ 17
