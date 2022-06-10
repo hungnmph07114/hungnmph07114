@@ -36,7 +36,7 @@ setShowGoToTop(false)
     },[])
     useEffect(() =>{
      const   handleResize = () =>{
-
+            setWidth(window.innerWidth)
         }
         window.addEventListener('resize',handleResize)
     })

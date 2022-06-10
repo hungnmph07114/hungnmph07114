@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Random from "./hook/Random";
-import TwoWayBinding from "./hook/Two-wayBinding";
-import Todolist from "./hook/Todolist";
 import MounteUnmounted from "./hook/MounteUnmounted";
+import Avatar from "./hook/Avatar";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,6 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <MounteUnmounted/>
+      <Avatar/>
   </React.StrictMode>
 );
 
