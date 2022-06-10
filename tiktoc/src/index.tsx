@@ -14,9 +14,6 @@ const root = ReactDOM.createRoot(
 // @ts-ignore
 root.render(
   <React.StrictMode>
-      <Random></Random>
-      <TwoWayBinding></TwoWayBinding>
-      <Todolist></Todolist>
       <MounteUnmounted/>
   </React.StrictMode>
 );

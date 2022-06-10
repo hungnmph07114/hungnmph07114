@@ -17,7 +17,7 @@ const coures = [
 ]
 
 function TwoWayBinding() {
-    const [name, setName] =useState('')
+  //  const [name, setName] =useState('')
     const [checked, setChecked] =useState([])
     const handleSubmit = () =>{
         console.log({ id : checked})
