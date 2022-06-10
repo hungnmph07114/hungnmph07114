@@ -1,15 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Random from "./hook/Random";
+import TwoWayBinding from "./hook/Two-wayBinding";
+import Todolist from "./hook/Todolist";
+import MounteUnmounted from "./hook/MounteUnmounted";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+// @ts-ignore
 root.render(
   <React.StrictMode>
-    <App />
+      <Random></Random>
+      <TwoWayBinding></TwoWayBinding>
+      <Todolist></Todolist>
+      <MounteUnmounted/>
   </React.StrictMode>
 );
 
