@@ -11,7 +11,8 @@ function Content(){
     const [title,setTitle] = useState('');
     const [posts,setPosts] = useState([]);
     const [type,setType] = useState('posts');
-    const [showGoToTop,setShowGoToTop] = useState(false)
+    const [showGoToTop,setShowGoToTop] = useState(false);
+    const [width,setWidth] = useState(window.innerWidth);
    useEffect(() =>{
      fetch(`https://jsonplaceholder.typicode.com/${type}`).then(res =>res.json()).then( posts =>{
          setPosts(posts)
@@ -19,19 +20,29 @@ function Content(){
    },[type])
     useEffect(() =>{
 const handleScroll = () =>{
-    console.log(window.scrollBy)
-    if(window.scrollBy <= 200 ){
+    if(window.scrollY <= 200 ){
 setShowGoToTop(true)
-        console.log(showGoToTop)
     }else {
 setShowGoToTop(false)
     }
     //setShowGoToTop(window.scrollBy >= 200)
+    // Cleanup function
+
 }
         window.addEventListener('scroll',handleScroll)
+        return () =>{
+            window.removeEventListener('scroll',handleScroll)
+        }
     },[])
+    useEffect(() =>{
+     const   handleResize = () =>{
+
+        }
+        window.addEventListener('resize',handleResize)
+    })
     return(
         <div>
+            <div>{width}</div>
             {tabs.map(tab =>(
                 <button
                     style={ type === tab ? {} : {
