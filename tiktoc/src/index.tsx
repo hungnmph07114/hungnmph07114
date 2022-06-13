@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {ThemeContext, ThemeProvider} from "./hook/useContexthook/ThemContext";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MounteUnmounted from "./hook/MounteUnmounted";
 import TodoAppWhitUseReducerHook from "./hook/Todo/TodoAppWhitUseReducerHook";
+import UseContent from "./hook/useContexthook/UseContent";
 // Fake comments
 function  emitComment(id:any){
     setInterval(() =>{
@@ -24,6 +26,10 @@ root.render(
   <React.StrictMode>
    <MounteUnmounted></MounteUnmounted>
       <TodoAppWhitUseReducerHook/>
+
+      <ThemeProvider>
+          <UseContent/>
+      </ThemeProvider>
   </React.StrictMode>
 );
 
