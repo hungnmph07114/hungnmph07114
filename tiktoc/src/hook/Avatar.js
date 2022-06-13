@@ -11,10 +11,10 @@ function Avatar (){
     }, [avatar]);
 
     const handlePreviewAvatar = (e) => {
-        console.log(e)
         const file = e.target.files[0];
       file.preview = URL.createObjectURL(file)
         setAvatar(file)
+        //e.target.value = null
     }
     return(
         <div>
@@ -22,7 +22,7 @@ function Avatar (){
             onChange={handlePreviewAvatar}/>
             {
                 avatar && (
-                <img src={avatar.preview} alt='' width='80%'/>
+                <img src={avatar.preview} alt ='' width='80%'/>
             ) }
         </div>
     )

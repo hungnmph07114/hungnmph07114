@@ -4,16 +4,25 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MounteUnmounted from "./hook/MounteUnmounted";
 import Avatar from "./hook/Avatar";
-
+// Fake comments
+function  emitComment(id:any){
+    setInterval(() =>{
+        window.dispatchEvent(
+            new  CustomEvent(`lesson-${id}`,{
+                detail:`Nội dung comment của lesson ${id} `
+            })
+        )
+    },2000)
+}
+emitComment(1)
+emitComment(2)
+emitComment(3)
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-
-// @ts-ignore
 root.render(
   <React.StrictMode>
       <MounteUnmounted/>
-      <Avatar/>
   </React.StrictMode>
 );
 
