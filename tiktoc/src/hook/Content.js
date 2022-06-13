@@ -76,4 +76,4 @@ setShowGoToTop(false)
         </div>
     )
 }
-export default Content;
+export default React.memo(Content);

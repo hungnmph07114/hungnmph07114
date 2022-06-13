@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MounteUnmounted from "./hook/MounteUnmounted";
-import Avatar from "./hook/Avatar";
+import TodoAppWhitUseReducerHook from "./hook/Todo/TodoAppWhitUseReducerHook";
 // Fake comments
 function  emitComment(id:any){
     setInterval(() =>{
@@ -22,7 +22,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-      <MounteUnmounted/>
+   <MounteUnmounted></MounteUnmounted>
+      <TodoAppWhitUseReducerHook/>
   </React.StrictMode>
 );
 
